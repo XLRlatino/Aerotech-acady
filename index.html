@@ -9,45 +9,57 @@
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
+<body style="background-image: url('images/atelier.jpg'); background-size: cover; background-attachment: fixed;">
+
     <header>
         <h1><i class="fas fa-plane-departure"></i> AéroTech Academy</h1>
         <p>Apprenez à maîtriser les outils essentiels en aéronautique</p>
     </header>
 
-    <section class="tools">
-        <article>
-            <h2><i class="fas fa-wrench"></i> Pince à sertir</h2>
-            <img src="images/pince-sertir.jpg" alt="Pince à sertir" class="outil-img">
-            <p>Utilisée pour sertir des cosses et connecteurs. Essentielle pour des connexions fiables.</p>
-        </article>
+    <nav>
+        <ul>
+            <li><a href="#outils">Outils</a></li>
+            <li><a href="#videos">Formations</a></li>
+            <li><a href="#quiz">Quiz</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-        <article>
-            <h2><i class="fas fa-cut"></i> Pince à dénuder</h2>
-            <img src="images/pince-denuder.jpg" alt="Pince à dénuder" class="outil-img">
-            <p>Permet de retirer l'isolation des fils sans les endommager.</p>
-        </article>
+    <section id="outils" class="tools">
+        <h2>Outils en aéronautique</h2>
+        <article><h3>Pince à sertir</h3><p>Pour fixer des connecteurs avec précision.</p></article>
+        <article><h3>Pince à dénuder</h3><p>Pour enlever l’isolation sans abîmer le câble.</p></article>
+        <article><h3>Multimètre</h3><p>Mesure de tension, intensité et résistance.</p></article>
+        <article><h3>Clé dynamométrique</h3><p>Pour appliquer un couple précis sur les vis.</p></article>
+        <article><h3>Riveteuse pneumatique</h3><p>Utilisée pour assembler les structures.</p></article>
+        <article><h3>Borescope</h3><p>Caméra d’inspection pour zones difficiles d’accès.</p></article>
     </section>
 
-    <section class="quiz-section">
+    <section id="videos" class="video-section">
+        <h2><i class="fas fa-video"></i> Formations vidéo</h2>
+        <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/tYpXcGzEoGg" title="Formation avionique" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <section id="quiz" class="quiz-section">
         <h2><i class="fas fa-question-circle"></i> Quiz interactif</h2>
         <div id="quiz">
-            <p id="question">Quel outil est utilisé pour enlever l’isolation des câbles ?</p>
-            <button onclick="repondre(true)">Pince à dénuder</button>
+            <p id="question">Quel outil est utilisé pour inspecter une zone interne difficile d'accès ?</p>
+            <button onclick="repondre(true)">Borescope</button>
             <button onclick="repondre(false)">Pince à sertir</button>
             <p id="resultat"></p>
         </div>
     </section>
 
-    <section class="video-section">
-        <h2><i class="fas fa-video"></i> Tutoriels vidéo</h2>
-        <div class="video-wrapper">
-            <iframe src="https://www.youtube.com/embed/tYpXcGzEoGg" title="Vidéo Outil Aéro" frameborder="0" allowfullscreen></iframe>
-        </div>
+    <section id="contact" class="contact-section">
+        <h2>Contact & Infos</h2>
+        <p>Pour toute demande de formation ou d'information : contact@aerotechacademy.fr</p>
     </section>
 
     <footer>
         <p>&copy; 2025 AéroTech Academy. Tous droits réservés.</p>
     </footer>
+
 </body>
 </html>

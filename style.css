@@ -1,75 +1,86 @@
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
     margin: 0;
     padding: 0;
-    background: #f0f4f8;
     color: #222;
 }
 
 header {
-    background: #002B5B;
+    background: rgba(0, 43, 91, 0.85);
     color: white;
     padding: 2rem 1rem;
     text-align: center;
 }
 
-header h1 {
+nav ul {
+    display: flex;
+    justify-content: center;
+    background: rgba(0, 43, 91, 0.9);
+    list-style: none;
     margin: 0;
-    font-size: 2.5rem;
+    padding: 10px 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
 }
 
 .tools {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    padding: 2rem;
 }
 
-article {
+.tools article {
+    width: 250px;
     background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    margin: 1rem;
+    margin: 10px;
     padding: 1rem;
-    width: 300px;
-}
-
-.outil-img {
-    width: 100%;
     border-radius: 8px;
-    margin-bottom: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-.quiz-section, .video-section {
+.video-section, .quiz-section, .contact-section {
+    background: rgba(255, 255, 255, 0.9);
     padding: 2rem;
     text-align: center;
-}
-
-#quiz button {
-    background: linear-gradient(to right, #FFA500, #FF8C00);
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 20px;
-    margin: 5px;
-    cursor: pointer;
-    transition: transform 0.2s;
-}
-
-#quiz button:hover {
-    transform: scale(1.05);
 }
 
 .video-wrapper iframe {
     width: 80%;
     max-width: 560px;
     height: 315px;
-    border-radius: 10px;
+}
+
+#quiz button {
+    background: #FFA500;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#quiz button:hover {
+    background: #FF8C00;
 }
 
 footer {
-    background: #002B5B;
+    background: rgba(0, 43, 91, 0.9);
     color: white;
     text-align: center;
     padding: 1rem;
