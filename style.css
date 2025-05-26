@@ -37,7 +37,7 @@ nav ul li a:hover {
 }
 
 .tools {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.92);
     padding: 2rem;
     display: flex;
     flex-wrap: wrap;
@@ -51,6 +51,11 @@ nav ul li a:hover {
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.tools article:hover {
+    transform: scale(1.05);
 }
 
 .video-section, .quiz-section, .contact-section {
@@ -63,6 +68,22 @@ nav ul li a:hover {
     width: 80%;
     max-width: 560px;
     height: 315px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.training-gallery {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.training-gallery img {
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
 }
 
 #quiz button {
