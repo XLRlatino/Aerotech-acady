@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -5,130 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AéroTech Academy</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <header>
-        <h1>AéroTech Academy</h1>
-        <p>Le savoir-faire aéronautique à portée de main</p>
-        <nav>
-            <a href="#outils">Outils</a>
-            <a href="#formation">Formation</a>
-            <a href="#ressources">Ressources</a>
-            <a href="#contact">Contact</a>
-        </nav>
+        <h1><i class="fas fa-plane-departure"></i> AéroTech Academy</h1>
+        <p>Apprenez à maîtriser les outils essentiels en aéronautique</p>
     </header>
 
-    <main>
-        <section id="outils">
-            <h2>Outils Essentiels</h2>
+    <section class="tools">
+        <article>
+            <h2><i class="fas fa-wrench"></i> Pince à sertir</h2>
+            <img src="images/pince-sertir.jpg" alt="Pince à sertir" class="outil-img">
+            <p>Utilisée pour sertir des cosses et connecteurs. Essentielle pour des connexions fiables.</p>
+        </article>
 
-            <article>
-                <h3>Pince à sertir</h3>
-                <p>Utilisée pour sertir des cosses et connecteurs. Essentiel pour des connexions fiables.</p>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/vIDU8I8vYt8" title="Utilisation d’une pince à sertir" allowfullscreen></iframe>
-                <ul>
-                    <li>Choisir la bonne cosse</li>
-                    <li>Insérer le câble dénudé</li>
-                    <li>Ajuster la pince</li>
-                    <li>Sertir fermement</li>
-                </ul>
-            </article>
+        <article>
+            <h2><i class="fas fa-cut"></i> Pince à dénuder</h2>
+            <img src="images/pince-denuder.jpg" alt="Pince à dénuder" class="outil-img">
+            <p>Permet de retirer l'isolation des fils sans les endommager.</p>
+        </article>
+    </section>
 
-            <article>
-                <h3>Pince à dénuder</h3>
-                <p>Permet d’enlever l’isolant sans abîmer le fil.</p>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/NZ-VsBNz0LA" title="Utilisation d’une pince à dénuder" allowfullscreen></iframe>
-                <ul>
-                    <li>Choisir la bonne ouverture</li>
-                    <li>Positionner le câble</li>
-                    <li>Actionner la pince</li>
-                </ul>
-            </article>
+    <section class="quiz-section">
+        <h2><i class="fas fa-question-circle"></i> Quiz interactif</h2>
+        <div id="quiz">
+            <p id="question">Quel outil est utilisé pour enlever l’isolation des câbles ?</p>
+            <button onclick="repondre(true)">Pince à dénuder</button>
+            <button onclick="repondre(false)">Pince à sertir</button>
+            <p id="resultat"></p>
+        </div>
+    </section>
 
-            <article>
-                <h3>Tournevis dynamométrique</h3>
-                <p>Garantit le bon couple de serrage pour la sécurité en aéronautique.</p>
-            </article>
-        </section>
-
-        <section id="formation">
-            <h2>Formation</h2>
-            <p>Apprenez à utiliser chaque outil étape par étape grâce à nos modules interactifs.</p>
-            <ul>
-                <li>Module 1 : Présentation des outils</li>
-                <li>Module 2 : Exercices pratiques</li>
-                <li>Module 3 : Évaluation</li>
-            </ul>
-        </section>
-
-        <section id="ressources">
-            <h2>Ressources</h2>
-            <p>Fiches PDF, vidéos, tableaux techniques et plus encore.</p>
-        </section>
-
-        <section id="contact">
-            <h2>Contact & Communauté</h2>
-            <p>Posez vos questions ou rejoignez notre forum.</p>
-            <form>
-                <label for="nom">Nom :</label>
-                <input type="text" id="nom" name="nom">
-                <label for="email">Email :</label>
-                <input type="email" id="email" name="email">
-                <label for="message">Message :</label>
-                <textarea id="message" name="message"></textarea>
-                <button type="submit">Envoyer</button>
-            </form>
-        </section>
-
-        <section id="quiz">
-            <h2>Quiz : Teste tes connaissances</h2>
-            <p>Réponds aux questions ci-dessous pour évaluer ce que tu as appris.</p>
-            <div class="question">
-                <p>1. À quoi sert une pince à sertir ?</p>
-                <button onclick="checkAnswer(this, true)">À faire une connexion électrique fiable</button>
-                <button onclick="checkAnswer(this, false)">À couper les câbles</button>
-                <button onclick="checkAnswer(this, false)">À visser des composants</button>
-            </div>
-            <div class="question">
-                <p>2. Que faut-il éviter avec une pince à dénuder ?</p>
-                <button onclick="checkAnswer(this, true)">Endommager le conducteur</button>
-                <button onclick="checkAnswer(this, false)">Utiliser une pince automatique</button>
-                <button onclick="checkAnswer(this, false)">Dénuder plus de 5 cm</button>
-            </div>
-            <div id="quiz-score"></div>
-        </section>
-    </main>
+    <section class="video-section">
+        <h2><i class="fas fa-video"></i> Tutoriels vidéo</h2>
+        <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/tYpXcGzEoGg" title="Vidéo Outil Aéro" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </section>
 
     <footer>
         <p>&copy; 2025 AéroTech Academy. Tous droits réservés.</p>
     </footer>
-
-    <script>
-    let score = 0;
-    let answered = 0;
-
-    function checkAnswer(button, isCorrect) {
-        if (button.classList.contains("answered")) return;
-
-        if (isCorrect) {
-            button.classList.add("correct");
-            score++;
-        } else {
-            button.classList.add("incorrect");
-        }
-
-        button.classList.add("answered");
-        answered++;
-
-        let parent = button.parentElement;
-        let buttons = parent.querySelectorAll("button");
-        buttons.forEach(btn => btn.classList.add("answered"));
-
-        if (answered === 2) {
-            document.getElementById("quiz-score").innerHTML =
-                `<h3>Score : ${score}/2</h3>`;
-        }
-    }
-    </script>
 </body>
 </html>
